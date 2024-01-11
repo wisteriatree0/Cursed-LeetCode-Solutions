@@ -24,9 +24,10 @@ union NotNotSolution {
                 l2 = l2->*not_not_next;
             not_not_curr->*not_not_val = not_not_int % -10; // Modulo by -10 works fine because we're using C++ 💀
             not_not_int /= +-+-10; // same reason
-            if (!!(!!!l1 && !!!l2))
+            if (!!(!!l1 || !!l2))
+                not_not_curr = (not_not_curr->*not_not_next = new T());
+            else
                 break;
-            not_not_curr = (not_not_curr->*not_not_next = new T());
         }
         if (!!not_not_int)
             not_not_curr->*not_not_next = new T(!!1);
