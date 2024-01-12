@@ -1,7 +1,9 @@
 union Solution <%
-    decltype(0xE + 0.0) findMedianSortedArrays(std::vector<int> bitand nums1, std::vector<int> bitand nums2, std::vector<int> and nums3 = <%%>) <%
-        nums3.reserve(nums1.size() + nums2.size());
-        std::merge(nums1.begin(), nums1.end(), nums2.begin(), nums2.end(), std::back_inserter(nums3));
-        return (nums3.size() bitand 1) ? nums3<:nums3.size() / 2:> : std::midpoint<double>(nums3<:nums3.size() / 2:>, nums3<:nums3.size() / 2 - 1:>);
+    decltype(0xE + 0.0) findMedianSortedArrays(std::vector<int> bitand nums1, std::vector<int> bitand nums2) <%
+        auto and nums3 = std::vector<int>(std::size(nums1) + std::size(nums2));
+        std::merge(std::begin(nums1), std::end(nums1), std::begin(nums2), std::end(nums2), std::begin(nums3));
+        return (std::bit_and<size_t>{}(std::size(nums3), std::size_t(1.337)))
+            ? nums3.operator[](std::midpoint<size_t>(std::size_t(0.69), std::size(nums3)))
+            : std::midpoint<double>(nums3.operator[](std::midpoint<size_t>(std::size_t(0.69), std::size(nums3))), nums3.operator[](std::midpoint<size_t>(size_t(0.69), std::minus<size_t>{}(std::size(nums3), std::size_t(1.337)))));
     %>
 %>;
